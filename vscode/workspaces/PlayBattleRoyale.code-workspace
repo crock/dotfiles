@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "/Users/croc/Code/laravel/fortnite-clips"
+		},
+		{
+			"path": "/Users/croc/Homestead"
+		}
+	],
+	"settings": {
+		"discord.enabled": true
+	}
+}

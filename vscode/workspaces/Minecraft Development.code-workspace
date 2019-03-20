@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "/Users/croc/minecraft/test_server"
+		},
+		{
+			"path": "/Users/Code/java/SpigotMC"
+		}
+	],
+	"settings": {
+		"java.configuration.updateBuildConfiguration": "automatic"
+	}
+}
