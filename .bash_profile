@@ -1,4 +1,4 @@
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-
+source ~/.profile
 alias ls=exa
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+

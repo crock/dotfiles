@@ -1,8 +1,4 @@
-# If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/croc/.oh-my-zsh"
@@ -12,17 +8,6 @@ export ZSH="/Users/croc/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="bullet-train"
-
-BULLETTRAIN_PROMPT_ORDER=(
-  time
-  context
-  dir
-  git
-)
-
-BULLETTRAIN_IS_SSH_CLIENT=true
-BULLETTRAIN_CONTEXT_BG=green
-BULLETTRAIN_CONTEXT_FG=black
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -40,14 +25,8 @@ BULLETTRAIN_CONTEXT_FG=black
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
-# Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
-
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS=true
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -86,6 +65,17 @@ plugins=(git emoji terminalapp)
 
 source $ZSH/oh-my-zsh.sh
 
+BULLETTRAIN_IS_SSH_CLIENT=true
+BULLETTRAIN_CONTEXT_BG=green
+BULLETTRAIN_CONTEXT_FG=black
+BULLETTRAIN_PROMPT_ORDER=(
+  time
+  context
+  dir
+  git
+)
+
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -95,18 +85,41 @@ export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
+   export EDITOR='vim'
 else
-  export EDITOR='mvim'
+   export EDITOR='mvim'
 fi
 
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
 
+# ssh
+export SSH_KEY_PATH="~/.ssh/id_rsa"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
 alias zshconfig="$EDITOR ~/.zshrc"
 alias ohmyzsh="open ~/.oh-my-zsh"
 alias ls=exa
+
+# DEFAULT NODE PATH
+export NVM_DIR=~/.nvm
+export NODE_PATH=~/.nvm/versions/node/v8.11.4/bin/node
+source $(/usr/local/bin/brew --prefix nvm)/nvm.sh
 
 # Homebrew MySQL 5.7
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
 # Composer
 export PATH="/Users/croc/.composer/vendor/bin:$PATH"
+
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
