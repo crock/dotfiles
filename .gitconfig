@@ -1,10 +1,5 @@
 [user]
-	email = croc122@gmail.com
+	email = hello@crock.dev
 	name = Alex Crocker
 [credential]
 	helper = osxkeychain
-[filter "lfs"]
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
