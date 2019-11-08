@@ -4,7 +4,7 @@ filetype plugin indent on
 syntax on
 
 " Sets Vim shell to bash
-set shell=/bin/bash
+set shell=/bin/zsh
 
 " Sets undo directory
 set undodir=~/.vim/undo
@@ -12,7 +12,7 @@ set undodir=~/.vim/undo
 "-------------------------Visuals-------------------------"
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme brogrammer
 let g:solarized_termtrans=1
 let g:solarized_termcolors=256
 set t_CO=256
@@ -20,17 +20,16 @@ set guioptions-=l                      "Hide left scrollbar
 set guioptions-=L                   "Hide left scrollbar when split vertically
 set guioptions-=r                      "Hide right scrollbar
 set guioptions-=R                   "Hide right scrollbar when split vertically
+
 "---------------------------------------------------------"
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
-
 call vundle#begin()
-
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'anned20/vimsence'
+" Plugin 'anned20/vimsence'
 Plugin 'scrooloose/syntastic'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'tpope/vim-fugitive'
@@ -46,18 +45,21 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'darthmall/vim-vue'
 Plugin 'wting/rust.vim'
 Plugin 'altercation/vim-colors-solarized'
-
 call vundle#end()
 
 set laststatus=2
-set t_Co=256
-
 set backspace=indent,eol,start
 set showcmd
 set lazyredraw
 set modelines=0
 set autoindent
+
+"The following two lines enables hybrid line numbers which means the currently
+"selected line shows an absolute number, but the other lines are relative to
+"the curre line.
+set number
 set relativenumber
+
 set noswapfile
 set showmatch
 set ignorecase
@@ -91,7 +93,6 @@ set foldlevelstart=20
 
 set mouse=a
 
-set pastetoggle=<leader>p
 set pastetoggle=<F9>
 
 nnoremap j gj
@@ -104,8 +105,6 @@ au BufRead,BufNewFile *.js.liquid set filetype=javascript
 au BufRead,BufNewFile *.liquid set filetype=html
 au BufRead,BufNewFile *.blade.php set filetype=html
 au BufRead,BufNewFile *.vue set filetype=html
-
-set pastetoggle=<F9>
 " ----- End custom keybindings -----
 
 " ---- ntpeters/vim-better-whitespace -----
