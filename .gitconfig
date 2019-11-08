@@ -1,0 +1,7 @@
+[user]
+	name = Alex Crocker
+	email = hello@crock.dev
+[core]
+	editor = code
+	excludesfile = /Users/croc/.gitignore_global
+
