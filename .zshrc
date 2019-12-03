@@ -103,10 +103,6 @@ SPACESHIP_PROMPT_DEFAULT_PREFIX="$USER"
 SPACESHIP_PROMPT_FIRST_PREFIX_SHOW="true"
 SPACESHIP_USER_SHOW="true"
 
-# Set Spaceship ZSH as a prompt
-autoload -U promptinit; promptinit
-prompt spaceship
-
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -138,15 +134,15 @@ alias ohmyzsh="open ~/.oh-my-zsh"
 alias ls=exa
 
 # DEFAULT NODE PATH
-export NVM_DIR=~/.nvm
-export NODE_PATH=~/.nvm/versions/node/v8.11.4/bin/node
-source $(/usr/local/bin/brew --prefix nvm)/nvm.sh
+export NVM_DIR="$HOME/.nvm"
+    [ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && . "$(brew --prefix)/opt/nvm/nvm.sh" # This loads nvm
+    [ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && . "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
 
 # Homebrew MySQL 5.7
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
 # Composer
-export PATH="/Users/croc/.composer/vendor/bin:$PATH"
+export PATH="$HOME/.composer/vendor/bin:$PATH"
 
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
