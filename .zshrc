@@ -132,6 +132,7 @@ export SSH_KEY_PATH="~/.ssh/id_rsa"
 alias zshconfig="$EDITOR ~/.zshrc"
 alias ohmyzsh="open ~/.oh-my-zsh"
 alias ls=exa
+eval "$(hub alias -s)"
 
 # DEFAULT NODE PATH
 export NVM_DIR="$HOME/.nvm"
