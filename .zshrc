@@ -94,14 +94,6 @@ SPACESHIP_PROMPT_ORDER=(
   venv
   pyenv
 )
-SPACESHIP_PROMPT_ADD_NEWLINE="true"
-SPACESHIP_CHAR_SYMBOL=" \uf0e7"
-SPACESHIP_CHAR_PREFIX="\uf296"
-SPACESHIP_CHAR_SUFFIX=(" ")
-SPACESHIP_CHAR_COLOR_SUCCESS="yellow"
-SPACESHIP_PROMPT_DEFAULT_PREFIX="$USER"
-SPACESHIP_PROMPT_FIRST_PREFIX_SHOW="true"
-SPACESHIP_USER_SHOW="true"
 
 # User configuration
 
@@ -151,3 +143,14 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$HOME/flutter/bin
+
+export PHPBREW_SET_PROMPT=0
+export PHPBREW_RC_ENABLE=1
+source /Users/croc/.phpbrew/bashrc
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/croc/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/croc/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/croc/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/croc/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
